@@ -1,0 +1,337 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+button {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cards-illustration-background {
+  background-image: url(images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 240px;
+}
+
+.cards-illustration {
+  margin: auto;
+  position: relative;
+  padding: 1.77em 0.88em 0 0.88em;
+  color: hsl(0, 0%, 100%);
+  height: 100%;
+}
+
+.card-front {
+  background-image: url(images/bg-card-front.png);
+  position: absolute;
+  top: 7em;
+  padding: 1em;
+}
+
+.card-back {
+  background-image: url(images/bg-card-back.png);
+  margin-left: auto;
+}
+
+.cards-illustration,
+.card-front,
+.card-back {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card-front,
+.card-back {
+  width: 286px;
+  height: 158px;
+}
+
+.credit-card-pin {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 38px;
+  padding-top: 70px;
+  font-size: 10px;
+}
+
+.credit-card-logo {
+  margin-bottom: 2em;
+}
+
+.credit-card-logo img {
+  height: 30px;
+}
+
+.long-card-number {
+  letter-spacing: 1px;
+  word-spacing: 6px;
+  margin-bottom: 1em;
+}
+
+.card-name-expiry {
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#card--name {
+  text-transform: uppercase;
+}
+
+/* -------- INPUT FORM -------- */
+
+.input-form,
+.form-complete {
+  padding: 5em 1.33em 2.5em 1.33em;
+}
+
+.cards-illustration,
+form,
+.form-complete {
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: none;
+}
+
+form label {
+  text-transform: uppercase;
+  color: hsl(278, 68%, 11%);
+  font-size: 0.7em;
+  margin-bottom: 0.5em;
+}
+
+form input {
+  margin-bottom: 0.55em;
+  padding: 0.8em;
+  color: hsl(278, 68%, 11%);
+  border: solid 1px hsl(270, 3%, 87%);
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+}
+
+form input:hover,
+form input:focus {
+  cursor: pointer;
+  background: radial-gradient(
+        circle at 100% 100%,
+        #ffffff 0,
+        #ffffff 5px,
+        transparent 5px
+      )
+      0% 0%/6px 6px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 5px, transparent 5px)
+      100% 0%/6px 6px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 5px, transparent 5px)
+      0% 100%/6px 6px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 5px, transparent 5px) 100%
+      100%/6px 6px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 2px)
+      calc(100% - 12px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 12px)
+      calc(100% - 2px) no-repeat,
+    linear-gradient(90deg, hsl(249, 99%, 64%) 0%, hsl(278, 94%, 30%) 100%);
+  border-radius: 6px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+form input::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+
+.card-expiry-pin {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card--expiry,
+.card--pin {
+  display: flex;
+  flex-direction: column;
+}
+
+#card-expiry--mm {
+  grid-area: input1;
+}
+
+#card-expiry--yy {
+  grid-area: input2;
+}
+
+#err-message {
+  grid-area: message;
+}
+
+.card-expiry-input {
+  display: grid;
+  grid-template-areas:
+    "input1 input2"
+    "message message";
+
+  margin-right: 8px;
+  width: 163px;
+}
+
+.card-expiry-input input {
+  width: 75px;
+}
+
+.card-name-number {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-pin {
+  max-width: 190px;
+}
+
+.btn {
+  width: 100%;
+}
+
+.btn button,
+.btn a {
+  width: 100%;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  padding: 1.11em;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn button:hover,
+.btn a:hover {
+  cursor: pointer;
+}
+
+.error-message {
+  margin-bottom: 1.55em;
+  display: block;
+  color: hsl(0, 100%, 66%);
+  font-size: 0.6em;
+}
+
+div.error input {
+  border: solid 1px hsl(0, 100%, 66%);
+}
+
+.form-complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tick {
+  width: 80px;
+  margin-bottom: 2.33em;
+}
+
+.form-complete h1 {
+  letter-spacing: 6px;
+  margin-bottom: 1.55em;
+  color: hsl(278, 68%, 11%);
+}
+
+.form-complete p {
+  margin-bottom: 2.66em;
+  color: hsl(279, 6%, 55%);
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1310px) {
+  .container {
+    display: flex;
+  }
+
+  .cards-illustration-background {
+    background-image: url(images/bg-main-desktop.png);
+    width: 35%;
+    height: 100vh;
+  }
+
+  .input-form,
+  .form-complete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .cards-illustration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    max-width: none;
+  }
+
+  .card-front,
+  .card-back {
+    width: 446px;
+    height: 244px;
+    position: relative;
+    padding: 1.55em 1.8em;
+  }
+
+  .card-front {
+    top: 0;
+    right: -7.11em;
+    margin-bottom: 2em;
+  }
+
+  .card-back {
+    right: -12.33em;
+  }
+
+  .credit-card-logo img {
+    height: 48px;
+  }
+
+  .credit-card-logo {
+    margin-bottom: 3em;
+  }
+
+  .long-card-number {
+    font-size: 1.6em;
+  }
+
+  .card-name-expiry,
+  .credit-card-pin {
+    font-size: 0.8em;
+  }
+
+  .credit-card-pin {
+    padding-top: 82px;
+    padding-right: 28px;
+  }
+}
+
+.hide {
+  display: none;
+}

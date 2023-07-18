@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cards-illustration-background">
+        <div class="cards-illustration">
+          <div class="card-front">
+            <div class="credit-card-logo">
+              <img
+                class="card-logo"
+                src="images/card-logo.svg"
+                alt="Credit Card Logo"
+              />
+            </div>
+            <div class="long-card-number">
+              <span id="long--card--num">0000 0000 0000 0000</span>
+            </div>
+            <div class="card-name-expiry">
+              <span id="card--name">jane appleseed</span>
+
+              <div>
+                <span id="exp--mm">00</span>
+                <span>/</span>
+                <span id="exp--yy">00</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="credit-card-pin">
+              <span id="card--pin">000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="input-form">
+        <form>
+          <fieldset>
+            <div class="card-name-number">
+              <div class="full--name">
+                <label for="full-name">Cardholder Name</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  placeholder="e.g. Jane Appleseed"
+                  value=""
+                />
+                <small class="error-message"></small>
+              </div>
+
+              <div class="card--number">
+                <label for="card-number">Card Number</label>
+                <input
+                  class=""
+                  type="text"
+                  id="card-number"
+                  name="card-number"
+                  placeholder="e.g. 1234 5678 9123 0000"
+                  maxlength="16"
+                  value=""
+                />
+                <small class="error-message"></small>
+              </div>
+            </div>
+            <div class="card-expiry-pin">
+              <div class="card--expiry">
+                <label for="card-expiry">Exp. Date (MM/YY)</label>
+                <div class="card-expiry-input">
+                  <input
+                    class=""
+                    type="text"
+                    id="card-expiry--mm"
+                    name="card-expiry--mm"
+                    min="1"
+                    max="12"
+                    placeholder="MM"
+                    maxlength="2"
+                    value=""
+                  />
+                  <input
+                    class=""
+                    type="text"
+                    id="card-expiry--yy"
+                    name="card-expiry--yy"
+                    placeholder="YY"
+                    maxlength="2"
+                    value=""
+                  />
+                  <small class="error-message" id="err-message"></small>
+                </div>
+              </div>
+              <div class="card--pin">
+                <label for="card-pin">CVC</label>
+                <input
+                  class=""
+                  type="text"
+                  id="card-pin"
+                  name="card-pin"
+                  placeholder="e.g. 123"
+                  maxlength="3"
+                  value=""
+                />
+                <small class="error-message"></small>
+              </div>
+            </div>
+            <div class="btn">
+              <button type="submit">Confirm</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- Completed state start, Thank you!  -->
+
+      <div class="form-complete hide">
+        <img
+          class="tick"
+          src="images/icon-complete.svg"
+          alt="A tick showing completion of form"
+        />
+        <h1>THANK YOU!</h1>
+        <p>We've added your card details Continue</p>
+        <div class="btn">
+          <a href="#">Continue</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
